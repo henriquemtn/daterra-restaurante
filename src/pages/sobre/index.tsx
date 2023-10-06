@@ -1,5 +1,5 @@
 import Header from "../../components/Header";
-import Description, { DescriptionAbout } from "../../components/Model/Description";
+import { DescriptionAbout } from "../../components/Model/Description";
 import FooterSection from "../../components/Sections/Footer";
 import OurTeam from "../../components/Sobre/Team";
 

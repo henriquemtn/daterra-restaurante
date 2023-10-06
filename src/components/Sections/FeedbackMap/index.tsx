@@ -17,7 +17,7 @@ export default function FeedbackMap() {
                             height="100%"
                             title="map"
                         />
-                        <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md hidden sm:block">
+                        <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md sm:block">
                             <div className="lg:w-1/2 px-6">
                                 <h2 className="title-font text-gray-900 tracking-widest text-2xs font-bold">Endereço:</h2>
                                 <p className="mt-1">R. Joe Collaço, 1034 - Santa Monica, Florianópolis - SC, 88035-200</p>

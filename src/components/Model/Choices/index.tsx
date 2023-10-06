@@ -1,10 +1,9 @@
 interface CustomChoices {
     title: string;
     image: string;
-    ident: number;
 }
 
-export default function Choices({ title, image, ident }: CustomChoices) {
+export default function Choices({ title, image }: CustomChoices) {
     const backgroundImageStyle = {
         backgroundImage: `url(${image})`,
         backgroundSize: 'cover',

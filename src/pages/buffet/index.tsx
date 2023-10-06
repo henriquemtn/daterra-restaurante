@@ -26,27 +26,26 @@ export default function Buffet() {
     setActualChoice(ident);
   };
 
-  
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+ 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     setIsDragging(true);
     setDragStartX(e.clientX);
     setScrollLeft(containerRef.current?.scrollLeft || 0);
+    console.log(handleMouseDown)
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleMouseUp = () => {
     setIsDragging(false);
+    console.log(handleMouseUp)
   };
 
-  //eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!isDragging) return;
     const delta = e.clientX - dragStartX;
     if (containerRef.current) {
       containerRef.current.scrollLeft = scrollLeft - delta;
     }
+    console.log(handleMouseMove)
   };
 
   useEffect(() => {
@@ -102,7 +101,7 @@ export default function Buffet() {
             className="flex flex-col items-center justify-center cursor-pointer"
             onClick={() => handleSetChoice(1)}
           >
-            <Choices ident={1} title="Veganos" image={Veganos} />
+            <Choices title="Veganos" image={Veganos} />
             <div
               className={`w-[80%] h-[3px] rounded-sm mt-5 ${
                 actualChoice === 1 ? "bg-[#1C4E32]" : "bg-[#F5F5F5]"
@@ -113,7 +112,7 @@ export default function Buffet() {
             className="flex flex-col items-center justify-center cursor-pointer"
             onClick={() => handleSetChoice(2)}
           >
-            <Choices ident={2} title="Saladas" image={Saladas} />
+            <Choices title="Saladas" image={Saladas} />
             <div
               className={`w-[80%] h-[3px] rounded-sm mt-5 ${
                 actualChoice === 2 ? "bg-[#1C4E32]" : "bg-[#F5F5F5]"
@@ -124,7 +123,7 @@ export default function Buffet() {
             className="flex flex-col items-center justify-center cursor-pointer"
             onClick={() => handleSetChoice(3)}
           >
-            <Choices ident={3} title="Proteínas" image={Proteinas} />
+            <Choices title="Proteínas" image={Proteinas} />
             <div
               className={`w-[80%] h-[3px] rounded-sm mt-5 ${
                 actualChoice === 3 ? "bg-[#1C4E32]" : "bg-[#F5F5F5]"
@@ -135,7 +134,7 @@ export default function Buffet() {
             className="flex flex-col items-center justify-center cursor-pointer"
             onClick={() => handleSetChoice(4)}
           >
-            <Choices ident={4} title="Sucos Naturais" image={Sucos} />
+            <Choices title="Sucos Naturais" image={Sucos} />
             <div
               className={`w-[80%] h-[3px] rounded-sm mt-5 ${
                 actualChoice === 4 ? "bg-[#1C4E32]" : "bg-[#F5F5F5]"
