@@ -26,16 +26,21 @@ export default function Buffet() {
     setActualChoice(ident);
   };
 
+  
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     setIsDragging(true);
     setDragStartX(e.clientX);
     setScrollLeft(containerRef.current?.scrollLeft || 0);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleMouseUp = () => {
     setIsDragging(false);
   };
 
+  //eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!isDragging) return;
     const delta = e.clientX - dragStartX;
@@ -77,6 +82,7 @@ export default function Buffet() {
       default:
         setChoice("");
         setChoiceBar(false);
+        console.log(choiceBar)
         break;
     }
   }, [actualChoice]);
