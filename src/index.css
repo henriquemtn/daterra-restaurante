@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'Segoe UI', AbhayaLibre, Tahoma, Geneva, Verdana, sans-serif;
+ 
+}
+
+h3{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 20px;
+}
+
+/* bolinha ativa swiper */
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #1C4E32;
+  opacity: 1;
+}
+
+/* bolinhas inativas swiper */
+.swiper-pagination-bullet {
+  background-color: #69987E;
+  opacity: 1;
+}
