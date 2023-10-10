@@ -49,7 +49,7 @@ export default function FeedbackMap() {
 
         emailjs
             .send(serviceID, templateID, params)
-            .then((res) => {
+            .then((_res) => {
                 toast.success("Email enviado com sucesso!");
                 console.log("Email enviado");
             })

@@ -49,7 +49,7 @@ export default function Formulario() {
 
         emailjs
             .send(serviceID, templateID, params)
-            .then((res) => {
+            .then((_res) => {
                 toast.success("Email enviado com sucesso!");
                 console.log("Email enviado");
             })
