@@ -21,7 +21,7 @@ export default function Slider() {
                     <h1 className="text-5xl md:text-[64px] text-white font-medium">DaTerra Natural</h1>
                     <div className='flex justify-between items-center w-50 mx-auto text-2xl text-[#1C4E32]'>
                         <FaLeaf style={{ transform: 'scaleX(-1)' }} />
-                        <p className="text-base md:text-[24px] text-white py-5 px-2 text-center">Opções vegetarianas, veganas e tradicionais</p>
+                        <p className="text-[13px] md:text-[24px] text-white py-5 px-2 text-center">Opções vegetarianas, veganas e tradicionais</p>
                         <FaLeaf />
                     </div>
                     <div className='bg-white w-[350px] h-[1px] mb-4'></div>

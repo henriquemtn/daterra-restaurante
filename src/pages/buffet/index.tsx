@@ -144,11 +144,13 @@ export default function Buffet() {
         </div>
       </div>
       <div className="flex justify-center mx-auto">
-        <div className="p-2 rounded-2xl my-5 bg-[#1C4E32] text-white flex flex-col justify-center items-center">
+        <div className="p-2 rounded-2xl my-5  bg-[#1C4E32] text-white flex flex-col justify-center items-center">
           <div className="pt-2 text-2xl">
             <h1>{choiceTitle}</h1>
           </div>
-          <Description text={choice} />
+          <div className="md:mt-5 ">
+            <Description text={choice} />
+          </div>
         </div>
       </div>
       <FooterSection />

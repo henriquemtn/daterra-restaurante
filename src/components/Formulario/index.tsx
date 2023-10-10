@@ -2,6 +2,7 @@ import FadeInOnScroll from "../../scripts/fadeInOnScroll";
 import CustomButton from "../Button";
 
 export default function Formulario() {
+    
     return (
         <section className="text-gray-600 body-font relative">
             <FadeInOnScroll>

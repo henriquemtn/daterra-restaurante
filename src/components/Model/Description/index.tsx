@@ -8,7 +8,7 @@ export default function Description({ text }: CustomDescription) {
     return (
         <section className="body-font">
             <FadeInOnScroll>
-                <div className="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center">
+                <div className="container mx-auto flex px-5 md:flex-row flex-col items-center">
                     <div className="max-w-lg mb-10 md:mb-0">
                     </div>
                     <div className="lg:flex-grow flex flex-col md:items-start md:text-left items-center ">
