@@ -1,8 +1,67 @@
+import { useState } from "react";
 import FadeInOnScroll from "../../../scripts/fadeInOnScroll";
 import CustomButton from "../../Button";
 import CustomIframe from "../../Maps";
+import emailjs from "emailjs-com"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function FeedbackMap() {
+
+    const [formData, setFormData] = useState({
+        name: "",
+        tel: "",
+        email: "",
+        message: "",
+    });
+
+    const handleChange = (e: any) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
+
+    const isValidFormData = () => {
+        return formData.name && formData.email && formData.message;
+    };
+
+    const sendMail = () => {
+        emailjs.init("FBtadcftC0yLwxsYB");
+
+        if (!isValidFormData()) {
+            toast.error("Preencha todos os campos obrigatórios.");
+            return;
+        }
+
+        var params = {
+            name: formData.name,
+            to: "daterra.restaurantenatural@gmail.com",
+            subject: "Feedback",
+            replyto: formData.email,
+            message: formData.message,
+            email: formData.email,
+        };
+
+        var serviceID = "service_fb0pxbf";
+        var templateID = "template_2wjg80e";
+
+        emailjs
+            .send(serviceID, templateID, params)
+            .then((res) => {
+                toast.success("Email enviado com sucesso!");
+                console.log("Email enviado");
+            })
+            .catch((error) => {
+                toast.error("Ocorreu um erro ao enviar o email.");
+                console.error("Erro ao enviar o email:", error);
+            });
+    };
+
+    const handleEnviarClick = () => {
+        sendMail();
+    };
 
     return (
         <section className="text-gray-600 body-font relative">
@@ -36,17 +95,28 @@ export default function FeedbackMap() {
                         <p className="leading-relaxed mb-5 text-gray-600">Gostaríamos muito de ouvir a sua opinião! Por favor, compartilhe conosco o seu feedback para que possamos continuar melhorando.</p>
                         <div className="relative mb-4">
                             <label htmlFor="name" className="leading-7 text-sm text-gray-600">Nome</label>
-                            <input type="text" id="name" name="name" className="w-full bg-white rounded border border-gray-300 focus:border-dtverde focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            <input type="text" id="name" name="name" className="w-full bg-white rounded border border-gray-300 focus:border-dtverde focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            value={formData.name}
+                            onChange={handleChange}
+                            />
                         </div>
                         <div className="relative mb-4">
                             <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
-                            <input type="email" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-dtverde focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            <input type="email" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-dtverde focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            value={formData.email}
+                            onChange={handleChange}
+                            />
                         </div>
                         <div className="relative mb-4">
                             <label htmlFor="message" className="leading-7 text-sm text-gray-600">Mensagem</label>
-                            <textarea id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-dtverde focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors ease-in-out"></textarea>
+                            <textarea id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-dtverde focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors ease-in-out"
+                            value={formData.message}
+                            onChange={handleChange}
+                            ></textarea>
                         </div>
-                        <CustomButton title="Enviar" backgroundColor="#1E1E1E" hoverColor="#0F0F0F" width="full" />
+                        <div onClick={handleEnviarClick} className="w-full">
+                            <CustomButton title="Enviar" backgroundColor="#1E1E1E" hoverColor="#0F0F0F" width="100%" />
+                        </div>
                     </div>
                 </div>
             </FadeInOnScroll>
