@@ -13,8 +13,8 @@ export default function OurTeam() {
                                 <img alt="team" className="flex-shrink-0 rounded-lg w-52 h-52 object-cover object-center sm:mb-0 mb-4" src={Clarissa} />
                                 <div className="flex-grow sm:pl-8">
                                     <h2 className="title-font font-medium text-lg text-gray-900">Clarissa Barcellos</h2>
-                                    <h3 className="text-gray-500 mb-3">Contato: (48) 912345678</h3>
-                                    <p className="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                                    <h3 className="text-gray-500 mb-3">Sócio proprietário.</h3>
+                                    <p className="mb-4">Contato: (48) 99638-2318</p>
                                 </div>
                             </div>
                         </div>
@@ -23,8 +23,8 @@ export default function OurTeam() {
                                 <img alt="team" className="flex-shrink-0 rounded-lg w-52 h-52 object-cover object-center sm:mb-0 mb-4" src={Edson} />
                                 <div className="flex-grow sm:pl-8">
                                     <h2 className="title-font font-medium text-lg text-gray-900">Edson Machado</h2>
-                                    <h3 className="text-gray-500 mb-3">Contato: (48) 912345678</h3>
-                                    <p className="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                                    <h3 className="text-gray-500 mb-3">Sócio proprietário.</h3>
+                                    <p className="mb-4">Contato: (48) 99664-7950</p>
 
                                 </div>
                             </div>

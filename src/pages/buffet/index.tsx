@@ -9,7 +9,7 @@ import FooterSection from "../../components/Sections/Footer";
 import Sucos from '../../assets/swiper-images/sucoverde.png'
 import Proteinas from '../../assets/buffet/proteinas.png'
 import Saladas from '../../assets/buffet/saladas.png'
-import Veganos from '../../assets/buffet/veganos.png'
+import Veganos from '../../assets/buffet/veganos.jpeg'
 
 export default function Buffet() {
   const [choice, setChoice] = useState("Minha escolha 1");
