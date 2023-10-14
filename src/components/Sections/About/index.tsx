@@ -15,7 +15,7 @@ export default function About() {
                         <div className="bg-gray-300 h-[1px] w-full my-4"></div>
                     </h1>
                     <p className="mb-8 leading-relaxed">
-                    O restaurante Da Terra, fundado em 2012 por Clarissa Barcellos, é uma extensão da visão de seus pais, oferecendo um buffet saudável e saboroso para toda a família. Com ingredientes orgânicos e atendimento de alta qualidade, o restaurante busca crescimento e reconhecimento na gastronomia através de parcerias saudáveis com colaboradores e clientes.
+                     O restaurante Da Terra, fundado em 2012 por Clarissa Barcellos, é uma extensão da visão de seus pais, oferecendo um buffet saudável e saboroso para toda a família. Com ingredientes orgânicos e atendimento de alta qualidade, o restaurante busca crescimento e reconhecimento na gastronomia através de parcerias saudáveis com colaboradores e clientes.
                     </p>
                     <div className="flex justify-center">
                         <a href="/sobre"><CustomButton title="Saiba Mais" backgroundColor="#1E1E1E" hoverColor="#0F0F0F" width="280px" /></a>
