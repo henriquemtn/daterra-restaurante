@@ -7,12 +7,18 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function Formulario() {
 
-    const [formData, setFormData] = useState({
+    const initialFormData = {
         name: "",
         tel: "",
         email: "",
         message: "",
-    });
+    };
+
+    const [formData, setFormData] = useState(initialFormData);
+
+    const resetForm = () => {
+        setFormData(initialFormData);
+    };
 
     const handleChange = (e: any) => {
         const { name, value } = e.target;
@@ -51,6 +57,7 @@ export default function Formulario() {
             .send(serviceID, templateID, params)
             .then((_res) => {
                 toast.success("Email enviado com sucesso!");
+                resetForm();
                 console.log("Email enviado");
             })
             .catch((error) => {

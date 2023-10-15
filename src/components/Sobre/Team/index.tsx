@@ -7,7 +7,7 @@ export default function OurTeam() {
         <section className="text-gray-600 body-font">
             <FadeInOnScroll>
                 <div className="container px-5 pb-20 max-w-[1335px] mx-auto">
-                    <div className="flex flex-wrap -m-4">
+                    <div className="flex flex-wrap -m-4 justify-center sm:justify-start">
                         <div className="p-4 lg:w-1/2">
                             <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                                 <img alt="team" className="flex-shrink-0 rounded-lg w-52 h-52 object-cover object-center sm:mb-0 mb-4" src={Clarissa} />
